@@ -1,44 +1,40 @@
-// TODO: Write questions and figure out how to pass input for shape, color, and text to class constructor and make a new logo
 const inquirer = require('inquirer');
 const fs = require('fs');
-const Shapes = require('./lib/shapes.js')
-const Triangle = require('./lib/shapes.js')
-const Circle = require('./lib/shapes.js')
-const Square = require('./lib/shapes.js')
+const { Triangle, Circle, Square } = require('./lib/shapes.js')
 
 const questions = [
     {
         type: 'input',
-        message: 'Enter up to three characters for the text of the logo:',
+        message: 'TEXT: Enter up to (3) characters for the text of the logo',
         name: 'text'
     },
     {
         type: 'input',
-        message: 'What color do you want to the text to be?',
+        message: 'TEXT COLOR: Enter a color keyword or a HEX # for the text color',
         name: 'textColor'
     },
     {
         type: 'list',
-        message: 'Select a shape for your logo:',
+        message: 'SHAPE: Select a shape for your logo',
         choices: ['Triangle', 'Circle', 'Square'],
         name: 'shape'
     },
     {
         type: 'input',
-        message: 'What color do you want the shape?',
+        message: 'SHAPE COLOR: Enter a color keyword or a HEX # for the shape color',
         name: 'shapeColor'
     }
 ];
 
 function init() {
     inquirer
-    .prompt(questions).then((data) => writeToFile(data));
+        .prompt(questions).then((data) => writeToFile(data));
 };
 
 function writeToFile(data) {
 
     let newLogo = {};
-    const {text, textColor, shape, shapeColor} = data
+    const { text, textColor, shape, shapeColor } = data
 
     if (shape == 'Triangle') {
         newLogo = new Triangle(`${text}`, `${textColor}`, `${shapeColor}`);
@@ -48,9 +44,9 @@ function writeToFile(data) {
         newLogo = new Square(`${text}`, `${textColor}`, `${shapeColor}`)
     }
 
-    console.log(newLogo);
+    const newSVG = newLogo.render();
 
-    // fs.writeFile(`./examples/${text}.svg`, newLogo, (err) => err ? console.error(err) : console.log('Generated logo'));
+    fs.writeFile(`./examples/${text}-${shape}.svg`, newSVG, (err) => err ? console.error(err) : console.log('Generated logo'));
 }
 
 init();
