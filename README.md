@@ -18,7 +18,7 @@ N/A
 
 ## Usage
 
-To use this application, first navigate to the root directory in your terimanl then run "node index.js". Follow the prompts, once finished a new SVG file will be located in the examples folder titled with whatever text you inputed and the shape you chose.
+To use this application, first, navigate to the root directory in your terminal then run "node index.js". Follow the prompts, once finished a new SVG file will be located in the examples folder titled with whatever text you inputted and the shape you chose.
 
 You can watch a demo of my application being used here => https://drive.google.com/file/d/1mOhv0fnDbUotjYKgbBOVbWvZT4O0TxXG/view
 
@@ -34,4 +34,4 @@ N/A
 
 ## Tests
 
-Refer to ./lib/shapes.test.js to view the tests for this application. To run the tests: first navigate to the root directory in your terimanl then run "npm test". The test results will appear shortly.
+Refer to ./lib/shapes.test.js to view the tests for this application. To run the tests: first, navigate to the root directory in your terminal then run "npm test". The test results will appear shortly.
