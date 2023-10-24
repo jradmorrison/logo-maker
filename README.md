@@ -1,15 +1,16 @@
 # SVG Logo Maker
-
+![logo-maker top language](https://img.shields.io/github/languages/top/jradmorrison/logo-maker)
+![logo-maker commits](https://img.shields.io/github/commit-activity/t/jradmorrison/logo-maker)
 ## Description
 
-A node.js CLI application that generates a simple logo following the users inputs
+A node.js CLI application that generates a simple logo after asking the user a serious of questions. 
 
 ## Table of Contents
 
 - [Installation](#installation)
 - [Usage](#usage)
-- [Credits](#credits)
 - [License](#license)
+- [Tests](#tests)
 
 ## Installation
 
@@ -30,11 +31,6 @@ N/A
 ## License
 
 ![](https://img.shields.io/github/license/jradmorrison/logo-maker)
-
-## Badges
-
-![logo-maker top language](https://img.shields.io/github/languages/top/jradmorrison/logo-maker)
-![logo-maker commits](https://img.shields.io/github/commit-activity/t/jradmorrison/logo-maker)
 
 ## Tests
 
