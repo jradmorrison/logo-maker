@@ -1,7 +1,9 @@
+// ============================= Imports ===================================
 const inquirer = require('inquirer');
 const fs = require('fs');
 const { Triangle, Circle, Square } = require('./lib/shapes.js')
 
+// ======================= Questions for prompt ============================
 const questions = [
     {
         type: 'input',
@@ -26,11 +28,13 @@ const questions = [
     }
 ];
 
+// ======================== Init Function ================================
 function init() {
     inquirer
         .prompt(questions).then((data) => writeToFile(data));
 };
 
+// ======================== write file ===================================
 function writeToFile(data) {
 
     let newLogo = {};
